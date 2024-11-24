@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator Container */
+.calculator {
+  width: 300px;
+  background: linear-gradient(145deg, #2c2c3d, #232332);
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px #191921, -10px -10px 20px #2f2f40;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Output Section */
+.output {
+  grid-column: span 4;
+  background: #131323;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: right;
+  font-size: 2em;
+  box-shadow: inset 5px 5px 10px #0f0f17, inset -5px -5px 10px #171727;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(145deg, #3a3a50, #2f2f3f);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #1c1c28, -5px -5px 10px #44445e;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Hover */
+button:hover {
+  background: linear-gradient(145deg, #44445e, #2f2f3f);
+  transform: scale(1.05);
+}
+
+/* Button Active Animation */
+button:active {
+  box-shadow: inset 5px 5px 10px #1c1c28, inset -5px -5px 10px #44445e;
+  transform: scale(0.95);
+}
+
+/* Special Buttons */
+#clear-button,
+#equal-button {
+  background: linear-gradient(145deg, #b08e8e, #d94c4c);
+  color: white;
+  grid-column: span 2;
+}
+
+#clear-button:hover,
+#equal-button:hover {
+  background: linear-gradient(145deg, #ff7070, #e55c5c);
+}
+
+/* Operator Buttons */
+#divide-button,
+#multiply-button,
+#subtract-button,
+#add-button {
+  background: linear-gradient(145deg, #1010d8, #3a3a50);
+}
+
+#divide-button:hover,
+#multiply-button:hover,
+#subtract-button:hover,
+#add-button:hover {
+  background: linear-gradient(145deg, #5a5a75, #5ac95a);
+}
+
+/* Number Buttons */
+.number {
+  background: linear-gradient(145deg, #422020, #2a2a3a);
+}
+
+.number:hover {
+  background: linear-gradient(145deg, #46466d, #34edea);
+}
+
+button:active {
+  animation: buttonPress 0.1s linear;
+}
